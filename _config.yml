@@ -1,9 +1,0 @@
-# Site Settings
-locale                   : "en-US"
-title                    : "Hayeon ❤ Hwi"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Hwi Song"
-description              : "d-day website"
-url                      : "https://songhwee1.github.io/TypeScript_Training"
-baseurl                  : # the subpath of your site, e.g. "/blog"
