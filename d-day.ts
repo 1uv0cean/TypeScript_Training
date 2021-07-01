@@ -1,6 +1,7 @@
 import { Application, Router } from "https://deno.land/x/oak@v7.7.0/mod.ts";
 import { dayOfYear } from 'https://deno.land/std/datetime/mod.ts'
 
+console.log(String(new Date()))
 
 const app = new Application();
 
@@ -10,7 +11,7 @@ app.use(router.routes())
 app.use(router.allowedMethods())
 
 router.get('/',(context) =>{
-    context.response.body = "하연이 "+String(dayOfYear(new Date(Date.now()))+1)+"일 동안 놀리는중!";
+    context.response.body = "하연이 "+String(dayOfYear(new Date()))+"일 동안 놀리는중!";
 })
 
 console.log('Server is listening on port 8080')
