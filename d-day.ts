@@ -1,6 +1,10 @@
 import { Application, Router } from "https://deno.land/x/oak@v7.7.0/mod.ts";
 
-console.log(String(new Date()))
+const app = new Application();
+const router = new Router();
+
+app.use(router.routes())
+app.use(router.allowedMethods())
 
 const SECOND = 1e3;
 const MINUTE = SECOND * 60;
@@ -18,13 +22,6 @@ function dayOfYear(date: Date): number {
   
     return Math.floor(diff / DAY);
   }
-
-const app = new Application();
-
-const router = new Router();
-
-app.use(router.routes())
-app.use(router.allowedMethods())
 
 router.get('/',(context) =>{
     context.response.body = "하연이 "+String(dayOfYear(new Date()))+"일 동안 놀리는중!";
